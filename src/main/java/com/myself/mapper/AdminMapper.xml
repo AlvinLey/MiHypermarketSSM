@@ -178,4 +178,7 @@
       a_pass = #{aPass,jdbcType=VARCHAR}
     where a_id = #{aId,jdbcType=INTEGER}
   </update>
+  <insert id="regist" parameterType="com.myself.pojo.Admin">
+    insert into admin (a_id,a_name,a_pass) values (#{aid},#{aname},{apass})
+  </insert>
 </mapper>

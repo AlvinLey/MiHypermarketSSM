@@ -14,7 +14,7 @@
 	<style type="text/css">
 
 	</style>
-	<link href="/favicon.ico" rel="icon" type="image/n1.icon" />
+	<%--<link href="/favicon.ico" rel="icon" type="image/n1.icon" />--%>
 </head>
 
 <body>

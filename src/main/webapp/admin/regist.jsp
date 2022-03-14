@@ -10,16 +10,28 @@ pageEncoding="UTF-8"%>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
 		<title></title>
-		
+
+		<script type="text/javascript">
+			function onCancel(){
+				location.href = "${pageContext.request.contextPath}/admin/login.jsp";
+			}
+		</script>
+
+		<script type="text/javascript">
+			if ("${msg}" != "") {
+				alert("${msg}");
+			}
+		</script>
+
 	</head>
 
 	<body>
 		<div id="login">
 			<div id="top">
-				<img src="images/cloud.jpg" /><span>REGIST</span>
+				<img src="${pageContext.request.contextPath}/images/cloud.jpg" /><span>REGIST</span>
 			</div>
 			<div id="bottom">
-				<form action="main.jsp" method="get">
+				<form action="${pageContext.request.contextPath}/" method="get">
 					<table border="0px" id="table">
 						<tr>
 							<td class="td1">用户名：</td>
@@ -40,7 +52,7 @@ pageEncoding="UTF-8"%>
 						<tr>
 							<td></td>
 							<td><input type="submit" value="注册" class="td3">
-								<input type="reset" value="取消" class="td3	">
+								<input type="reset" value="取消" class="td3	" onclick="onCancel()" >
 							</td>
 						</tr>
 					</table>
